@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .banner-box{
+            position: absolute;
+            width: 1246px;
+            height: 382px;
+        }
+        .tag-con{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+        .tag-con .tag-list{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .tag-con .tag-item{
+            height: 120px;
+        }
+       
+
+        .tag-con .tag-item img{
+            height: 120px;
+        }
+
+        .tag-con .pointer{
+            position: absolute;
+            height: 120px;
+            top: 0px;
+            left: 0;
+            z-index: 99;
+            transition-property:transform;
+            transform: translateY(0);
+        }
+        .tag-con .pointer img{
+            height: 110px;
+            width: 309px;
+            padding: 5px 0;
+           
+        }
+        .banner-con{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 936px;
+            overflow: hidden;
+        }
+        .banner-con .banner-list{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .banner-con .banner-item{
+            position: absolute;
+            opacity: 0;
+			transition-property: opacity;
+        }
+        .banner-con .banner-item.active{
+            opacity: 1;
+        }
+        .banner-con .banner-item a{
+            display: block;
+        }
+        .banner-con .banner-item a img{
+            width: 936px;
+            height: 382px;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href= "CSS文件路径"> -->
+</head>
+    
+<body>
+    <div class="banner-box">
+        <div class="tag-con">
+            <ul class="tag-list">
+                <li class="tag-item active">
+                    <img src="./img/1.jpg" alt="">
+                </li>
+                <li class="tag-item">
+                    <img src="./img/2.jpg" alt="">
+                </li>
+                <li class="tag-item">
+                    <img src="./img/3.jpg" alt="">
+                </li>
+            </ul>
+            <div class="pointer">
+                <img src="./img/pointer.png" alt="">
+            </div>
+        </div>
+        <div class="banner-con">
+            <ul class="banner-list">
+                <li class="banner-item active">
+                    <a href="javascript:">
+                        <img src="./img/1.jpg" alt="">
+                    </a>
+                </li>
+                <li class="banner-item">
+                    <a href="javascript:">
+                        <img src="./img/2.jpg" alt="">
+                    </a>
+                </li>
+                <li class="banner-item">
+                    <a href="javascript:">
+                        <img src="./img/3.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="./carousel.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        
+    
+    
+    </script>
+</body>
+</html>
